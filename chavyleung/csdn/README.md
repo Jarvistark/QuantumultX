@@ -10,8 +10,8 @@
 
 [Script]
 # 注意获取Cookie有两条脚本
-http-request ^https:\/\/passport.csdn.net\/v1\/api\/app\/login\/checkToken script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/csdn.cookie.js
-http-request ^https:\/\/gw.csdn.net\/mini-app\/v2\/lucky_draw\/login\/sign_in\? script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/csdn.cookie.js
+http-request ^https:\/\/passport.csdn.net\/v1\/api\/app\/login\/checkToken script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/csdn/csdn.cookie.js
+http-request ^https:\/\/gw.csdn.net\/mini-app\/v2\/lucky_draw\/login\/sign_in\? script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/csdn/csdn.cookie.js
 cron "10 0 0 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/csdn/csdn.js
 ```
 
@@ -38,7 +38,7 @@ cron "10 0 0 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scr
    - QuanX: 把`csdn.cookie.js`和`csdn.js`传到`On My iPhone - Quantumult X - Scripts` (传到 iCloud 相同目录也可, 注意要打开 quanx 的 iCloud 开关)
 3. 打开 APP , 系统提示: `获取刷新链接: 成功`
 4. 然后手动签到 1 次, 系统提示: `获取Cookie: 成功`
-5. 最后就可以把两条脚本注释掉了
+5. 最后就可以把两条获取 Cookie 的脚本注释掉了
 6. 运行一次脚本, 如果提示重复签到, 那就算成功了!
 
 > 第 1 条脚本是用来获取 cookie 的, 用浏览器访问一次获取 cookie 成功后就可以删掉或注释掉了, 但请确保在`登录成功`后再获取 cookie.
